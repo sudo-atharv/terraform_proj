@@ -9,13 +9,13 @@ pipeline {
     environment {
         AWS_ACCESS_KEY_ID     = credentials('aws-access-key-id')
         AWS_SECRET_ACCESS_KEY = credentials('aws-secret-access-key')
-        AWS_DEFAULT_REGION    = 'ap-southeast-1'
+        AWS_DEFAULT_REGION    = 'ap-south-1'
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/hackwithabhi1/terraform.git'
+                git branch: 'main', url: 'https://github.com/sudo-atharv/terraform_proj.git'
             }
         }
         stage('Terraform init') {
